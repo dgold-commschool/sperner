@@ -2,7 +2,7 @@ from util import *
 import plotly.express as px
 import pandas as pd
 
-niters = 100000
+niters = 500000
 
 n = 10
 
@@ -22,6 +22,7 @@ d = {"n": list(range(niters)), "reds": reds, "blues": blues, "greens": greens, "
 df = pd.DataFrame(data=d)
 
 print(pd.DataFrame.head(df))
-print(df.groupby(["reds", "greens"])["poly"].mean(numeric_only=True))
-fig = px.box(x=reds, y=polychromes)
+new_df = df.groupby(["reds", "greens"])["poly"].mean(numeric_only=True).reset_index()
+new_df = new_df.pivot(index='reds', columns='greens')['poly'].fillna(0)
+fig = px.imshow(new_df, x=new_df.columns, y=new_df.index)
 fig.show()
