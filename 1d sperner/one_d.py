@@ -1,4 +1,5 @@
 import random
+import plotly.express as px
 
 def count_flips(s):
     c = 0
