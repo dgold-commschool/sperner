@@ -30,6 +30,7 @@ for n in range(min_n, max_n):
 
 print(means)
 print(variances)
+print(variances)
 
 fig = px.scatter(x=list(range(min_n, max_n)), y=means)
 fig.show()
