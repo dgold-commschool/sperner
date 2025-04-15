@@ -15,5 +15,3 @@ def random_triangle(n):
             row = random.choice(["r", "g"]) + "".join([random.choice(["r", "b", "g"]) for k in range(row_len-2)]) + random.choice(["r", "b"])
         l.append(row)
     return(l)
-
-print(random_triangle(5))

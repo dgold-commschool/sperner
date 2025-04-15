@@ -23,7 +23,6 @@ triangle = build_board(n)
 for row in range(n):
     # Display dots in row
     x_positions = [mid_x + (point_buff / 2 + dot_radius) * k for k in list(range(-row, row + 1, 2))]
-    print(x_positions)
 
 centers = []
 
