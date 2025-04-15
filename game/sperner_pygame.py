@@ -2,9 +2,6 @@ import pygame
 import sys, math
 from game_util import *
 
-box_width = 75
-box_height = 75
-
 pygame.init()
 font = pygame.font.SysFont(None, 24)
 clock = pygame.time.Clock()
