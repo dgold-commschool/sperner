@@ -20,10 +20,6 @@ mid_x = (width - 2 * x_buff) / 2
 
 triangle = build_board(n)
 
-for row in range(n):
-    # Display dots in row
-    x_positions = [mid_x + (point_buff / 2 + dot_radius) * k for k in list(range(-row, row + 1, 2))]
-
 centers = []
 
 for row in range(n):
@@ -116,5 +112,3 @@ while True:
 
     pygame.display.flip()
     pygame.time.Clock()
-
-
